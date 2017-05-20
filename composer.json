@@ -12,6 +12,7 @@
             "email": "pierre@pierrelemee.fr"
         }
     ],
+    "version": "0.0.3",
     "repositories": [
         {
             "type": "path",
@@ -31,5 +32,8 @@
             "Bitmap\\Bundle\\BitmapBundle\\": ""
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    }
 }
