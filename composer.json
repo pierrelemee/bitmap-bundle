@@ -12,20 +12,11 @@
             "email": "pierre@pierrelemee.fr"
         }
     ],
-    "version": "0.0.3",
-    "repositories": [
-        {
-            "type": "path",
-            "url": "/Users/pierrelemee/Projects/bitmap",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
+    "version": "0.1.0",
     "require": {
         "php": ">=5.3.9",
         "symfony/framework-bundle": "~2.3|~3.0",
-        "pierrelemee/bitmap": "0.0.3"
+        "pierrelemee/bitmap": "^0.1"
     },
     "autoload": {
         "psr-4": {
