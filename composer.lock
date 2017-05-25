@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e32176ae8c18f4bed05898353ba7f44",
+    "content-hash": "f550b42e6156ac06d3aa9c2c485079bd",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -156,16 +156,16 @@
         },
         {
             "name": "pierrelemee/bitmap",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pierrelemee/bitmap.git",
-                "reference": "6a5dbf1c6cf81b44f10888bd7dc36e407fd514e6"
+                "reference": "27552e87f2ff9731616a5be2c1530a6a81cec5f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pierrelemee/bitmap/zipball/6a5dbf1c6cf81b44f10888bd7dc36e407fd514e6",
-                "reference": "6a5dbf1c6cf81b44f10888bd7dc36e407fd514e6",
+                "url": "https://api.github.com/repos/pierrelemee/bitmap/zipball/27552e87f2ff9731616a5be2c1530a6a81cec5f6",
+                "reference": "27552e87f2ff9731616a5be2c1530a6a81cec5f6",
                 "shasum": ""
             },
             "require": {
@@ -190,7 +190,7 @@
                 }
             ],
             "description": "My custom data mapper",
-            "time": "2017-05-22T19:24:10+00:00"
+            "time": "2017-05-25T21:14:53+00:00"
         },
         {
             "name": "psr/cache",
@@ -388,12 +388,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "a56a943e5c24bfb32868b3fed041ded710420792"
+                "reference": "bfa3962834ea7b72406ca81b6203733883a76f40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/a56a943e5c24bfb32868b3fed041ded710420792",
-                "reference": "a56a943e5c24bfb32868b3fed041ded710420792",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/bfa3962834ea7b72406ca81b6203733883a76f40",
+                "reference": "bfa3962834ea7b72406ca81b6203733883a76f40",
                 "shasum": ""
             },
             "require": {
@@ -452,7 +452,7 @@
                 "caching",
                 "psr6"
             ],
-            "time": "2017-05-17 16:21:40"
+            "time": "2017-05-25 05:53:40"
         },
         {
             "name": "symfony/class-loader",
@@ -632,12 +632,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "90b4ec8225b922399776c14dc0044fbcfc7e8a11"
+                "reference": "456d7c254e2d1ffcc1e72592d0808c25eb98f96f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/90b4ec8225b922399776c14dc0044fbcfc7e8a11",
-                "reference": "90b4ec8225b922399776c14dc0044fbcfc7e8a11",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/456d7c254e2d1ffcc1e72592d0808c25eb98f96f",
+                "reference": "456d7c254e2d1ffcc1e72592d0808c25eb98f96f",
                 "shasum": ""
             },
             "require": {
@@ -694,7 +694,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2017-05-21 08:57:11"
+            "time": "2017-05-25 05:53:40"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -863,12 +863,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/framework-bundle.git",
-                "reference": "bca1b27fc1b5b023274e318ea25216df6ee6a3c2"
+                "reference": "bbd53515eccc842e1c91c32905d72e4b08c87d77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/framework-bundle/zipball/bca1b27fc1b5b023274e318ea25216df6ee6a3c2",
-                "reference": "bca1b27fc1b5b023274e318ea25216df6ee6a3c2",
+                "url": "https://api.github.com/repos/symfony/framework-bundle/zipball/bbd53515eccc842e1c91c32905d72e4b08c87d77",
+                "reference": "bbd53515eccc842e1c91c32905d72e4b08c87d77",
                 "shasum": ""
             },
             "require": {
@@ -969,7 +969,7 @@
             ],
             "description": "Symfony FrameworkBundle",
             "homepage": "https://symfony.com",
-            "time": "2017-05-21 09:23:49"
+            "time": "2017-05-24 11:37:21"
         },
         {
             "name": "symfony/http-foundation",
@@ -1030,12 +1030,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "490aeff9934aacd84977260a4c788111e189ac63"
+                "reference": "4ba97f8c5c2e398cb6cf0c5301d14fca99cee561"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/490aeff9934aacd84977260a4c788111e189ac63",
-                "reference": "490aeff9934aacd84977260a4c788111e189ac63",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/4ba97f8c5c2e398cb6cf0c5301d14fca99cee561",
+                "reference": "4ba97f8c5c2e398cb6cf0c5301d14fca99cee561",
                 "shasum": ""
             },
             "require": {
@@ -1106,7 +1106,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2017-05-21 13:55:35"
+            "time": "2017-05-24 11:37:21"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1173,12 +1173,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-                "reference": "09658a10c46960099474053597d8b0c73c8bb3bc"
+                "reference": "f3af6eb3382caa4287ed7281031beb63b2fd85fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/routing/zipball/09658a10c46960099474053597d8b0c73c8bb3bc",
-                "reference": "09658a10c46960099474053597d8b0c73c8bb3bc",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/f3af6eb3382caa4287ed7281031beb63b2fd85fb",
+                "reference": "f3af6eb3382caa4287ed7281031beb63b2fd85fb",
                 "shasum": ""
             },
             "require": {
@@ -1243,7 +1243,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-05-18 12:56:12"
+            "time": "2017-05-24 11:37:21"
         },
         {
             "name": "symfony/stopwatch",
@@ -2313,12 +2313,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "d7906a08163e0450b015031ec81934553543e6d9"
+                "reference": "7e40fc6661ba9d4fa56c2e39781034312689636a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/d7906a08163e0450b015031ec81934553543e6d9",
-                "reference": "d7906a08163e0450b015031ec81934553543e6d9",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/7e40fc6661ba9d4fa56c2e39781034312689636a",
+                "reference": "7e40fc6661ba9d4fa56c2e39781034312689636a",
                 "shasum": ""
             },
             "require": {
@@ -2360,7 +2360,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-05-18 12:56:12"
+            "time": "2017-05-24 14:44:14"
         },
         {
             "name": "webmozart/assert",

@@ -3,7 +3,6 @@
 namespace Bitmap\Bundle\BitmapBundle\DependencyInjection;
 
 use Bitmap\Bitmap;
-use Bitmap\BitmapBuilder;
 use PDO;
 use Exception;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -19,16 +18,22 @@ class BitmapExtension extends Extension
     {
         $config = $this->processConfiguration(new Configuration(), $configs);
 
-        $builder = new BitmapBuilder();
+        $connections = [];
+        $default = null;
 
         foreach ($config['connections'] as $name => $options) {
-            $builder->addConnection($name, $this->getConnection($options), $name === 'default');
+            $connection = $container->setDefinition("bitmap.connection.$name", $this->getConnection($options));
+            $connections[] = $connection;
+            if ($name === 'default') {
+                $default = $container->setDefinition("bitmap.connection_default", $connection);
+            }
         }
 
-        Bitmap::initialize($builder);
-
-        $definition = new Definition(BitmapBuilder::class );
-        $definition->setFactory([Bitmap::class, 'current']);
+        $definition = new Definition(Bitmap::class );
+        $definition->setFactory([Bitmap::class, 'initialize']);
+        $definition->addArgument($container->has('monolog.logger.bitmap') ? $container->get('monolog.logger.bitmap') : null);
+        $definition->addArgument($connections);
+        $definition->addArgument($default);
         $container->setDefinition('bitmap', $definition);
     }
 
@@ -36,14 +41,17 @@ class BitmapExtension extends Extension
     {
         switch ($options['scheme']) {
             case "mysql":
-                return new PDO(
-                    sprintf(
-                        "mysql:dbname=%s;host=%s;charset=utf8",
-                        $options['name'],
-                        self::option($options, 'host', self::MYSQL_DEFAULT_HOST)
-                    ),
-                    self::option($options, 'user'),
-                    self::option($options, 'password')
+                return new Definition(
+                    PDO::class,
+                    [
+                        sprintf(
+                            "mysql:dbname=%s;host=%s;charset=utf8",
+                            $options['name'],
+                            self::option($options, 'host', self::MYSQL_DEFAULT_HOST)
+                        ),
+                        self::option($options, 'user'),
+                        self::option($options, 'password')
+                    ]
                 );
             default:
                 throw new Exception("");
