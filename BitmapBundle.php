@@ -12,6 +12,11 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class BitmapBundle extends Bundle
 {
+    public function boot()
+    {
+        $this->container->get('bitmap');
+    }
+
     public function getContainerExtension()
     {
         return new BitmapExtension();

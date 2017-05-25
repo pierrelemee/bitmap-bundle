@@ -27,7 +27,7 @@ class BitmapExtension extends Extension
 
         Bitmap::initialize($builder);
 
-        $definition = new Definition(Bitmap::class );
+        $definition = new Definition(BitmapBuilder::class );
         $definition->setFactory([Bitmap::class, 'current']);
         $container->setDefinition('bitmap', $definition);
     }
