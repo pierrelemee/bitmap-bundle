@@ -12,7 +12,7 @@
             "email": "pierre@pierrelemee.fr"
         }
     ],
-    "version": "0.1.1",
+    "version": "0.1.2",
     "require": {
         "php": ">=5.3.9",
         "symfony/framework-bundle": "~2.3|~3.0",
