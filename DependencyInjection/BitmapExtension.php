@@ -3,19 +3,30 @@
 namespace Bitmap\Bundle\BitmapBundle\DependencyInjection;
 
 use Bitmap\Bitmap;
+use Monolog\Logger;
 use PDO;
 use Exception;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Extension\Extension;
+use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 
-class BitmapExtension extends Extension
+class BitmapExtension extends Extension implements PrependExtensionInterface
 {
     const MYSQL_DEFAULT_HOST = '127.0.0.1';
     const MYSQL_DEFAULT_PORT = 3306;
 
+    public function prepend(ContainerBuilder $container)
+    {
+        if ($container->hasExtension('monolog')) {
+            //$container->getExtension('monolog')->load($configs, $container);
+        }
+    }
+
     public function load(array $configs, ContainerBuilder $container)
     {
+
+
         $config = $this->processConfiguration(new Configuration(), $configs);
 
         $connections = [];
@@ -31,7 +42,7 @@ class BitmapExtension extends Extension
 
         $definition = new Definition(Bitmap::class );
         $definition->setFactory([Bitmap::class, 'initialize']);
-        $definition->addArgument($container->has('monolog.logger.bitmap') ? $container->get('monolog.logger.bitmap') : null);
+        $definition->addArgument(null);//$container->findDefinition('monolog.handler.bitmap'));
         $definition->addArgument($connections);
         $definition->addArgument($default);
         $container->setDefinition('bitmap', $definition);

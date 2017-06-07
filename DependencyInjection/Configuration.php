@@ -16,9 +16,10 @@ class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder();
         $root = $treeBuilder->root('bitmap');
+        $root->isRequired();
         $root
-
             ->children()
+            ->scalarNode('logger')->end()
             ->arrayNode('connections')
                 ->prototype('array')
                     ->children()

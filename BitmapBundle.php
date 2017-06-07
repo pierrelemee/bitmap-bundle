@@ -14,6 +14,7 @@ class BitmapBundle extends Bundle
 {
     public function boot()
     {
+        // TODO find a way to be smarter than this brutal service initialization
         $this->container->get('bitmap');
     }
 

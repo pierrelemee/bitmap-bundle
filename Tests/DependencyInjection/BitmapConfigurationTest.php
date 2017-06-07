@@ -9,10 +9,13 @@ use Symfony\Component\Config\Definition\Processor;
 
 class BitmapConfigurationTest extends TestCase
 {
+    /**
+     * @expectedException \Exception
+     */
     public function testEmptyConfiguration()
     {
         $this->process([]);
-        //$this->process(['bitmap' => ['connections' => 4 ]]);
+
     }
 
     /**
