@@ -10,6 +10,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
+use Symfony\Component\DependencyInjection\Reference;
 
 class BitmapExtension extends Extension implements PrependExtensionInterface
 {
@@ -28,41 +29,37 @@ class BitmapExtension extends Extension implements PrependExtensionInterface
         $config = $this->processConfiguration(new Configuration(), $configs);
 
         $connections = [];
-        $default = null;
 
         foreach ($config['connections'] as $name => $options) {
-            $connection = $container->setDefinition("bitmap.connection.$name", $this->getConnection($options));
-            $connections[] = $connection;
-            if ($name === 'default') {
-                $default = $container->setDefinition("bitmap.connection_default", $connection);
-            }
+            $connections[$name] = $this->getConnection($options);
         }
-
-        Bitmap::setProvider(function () use ($connections, $default) {
-            return new Bitmap(null, $connections, $default);
-        });
 
         $definition = new Definition(Bitmap::class );
         $definition->setFactory([Bitmap::class, 'current']);
+        $definition->addArgument($connections);
         $container->setDefinition('bitmap', $definition);
     }
 
+    /**
+     * @param $options
+     * @return array
+     *
+     * @throws Exception
+     */
     protected function getConnection($options)
     {
         switch ($options['scheme']) {
             case "mysql":
-                return new Definition(
-                    PDO::class,
-                    [
-                        sprintf(
+                return [
+                    'dsn' => sprintf(
                             "mysql:dbname=%s;host=%s;charset=utf8",
                             $options['name'],
                             self::option($options, 'host', self::MYSQL_DEFAULT_HOST)
                         ),
-                        self::option($options, 'user'),
-                        self::option($options, 'password')
-                    ]
-                );
+                    'user' => self::option($options, 'user'),
+                    'password' => self::option($options, 'password'),
+                    'default' => self::option($options, 'default', false)
+                ];
             default:
                 throw new Exception("");
         }
