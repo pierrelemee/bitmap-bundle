@@ -25,8 +25,6 @@ class BitmapExtension extends Extension implements PrependExtensionInterface
 
     public function load(array $configs, ContainerBuilder $container)
     {
-
-
         $config = $this->processConfiguration(new Configuration(), $configs);
 
         $connections = [];
@@ -40,11 +38,12 @@ class BitmapExtension extends Extension implements PrependExtensionInterface
             }
         }
 
+        Bitmap::setProvider(function () use ($connections, $default) {
+            return new Bitmap(null, $connections, $default);
+        });
+
         $definition = new Definition(Bitmap::class );
-        $definition->setFactory([Bitmap::class, 'initialize']);
-        $definition->addArgument(null);//$container->findDefinition('monolog.handler.bitmap'));
-        $definition->addArgument($connections);
-        $definition->addArgument($default);
+        $definition->setFactory([Bitmap::class, 'current']);
         $container->setDefinition('bitmap', $definition);
     }
 
