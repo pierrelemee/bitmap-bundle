@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fcda9fd58a806be2c7f27ae0a100618d",
+    "content-hash": "16ed5ea97732e13e6c92ba812c9b28d7",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -86,16 +86,16 @@
         },
         {
             "name": "pierrelemee/bitmap",
-            "version": "dev-master",
+            "version": "0.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pierrelemee/bitmap.git",
-                "reference": "eba219c77e3a2a739c670c3b2b3c7212fe03b501"
+                "reference": "b9b1ec699e218c71c3ec41a3997fed6e9e5aa0db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pierrelemee/bitmap/zipball/eba219c77e3a2a739c670c3b2b3c7212fe03b501",
-                "reference": "eba219c77e3a2a739c670c3b2b3c7212fe03b501",
+                "url": "https://api.github.com/repos/pierrelemee/bitmap/zipball/b9b1ec699e218c71c3ec41a3997fed6e9e5aa0db",
+                "reference": "b9b1ec699e218c71c3ec41a3997fed6e9e5aa0db",
                 "shasum": ""
             },
             "require": {
@@ -113,6 +113,7 @@
                     "Misc\\": "tests/Misc/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
                     "name": "Pierre",
@@ -120,11 +121,7 @@
                 }
             ],
             "description": "My custom data mapper",
-            "support": {
-                "source": "https://github.com/pierrelemee/bitmap/tree/master",
-                "issues": "https://github.com/pierrelemee/bitmap/issues"
-            },
-            "time": "2017-09-16 21:26:11"
+            "time": "2017-09-17T15:58:53+00:00"
         },
         {
             "name": "psr/cache",
@@ -1503,7 +1500,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-10-06 15:47:00"
+            "time": "2015-10-06T15:47:00+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1550,7 +1547,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2016-10-03 07:40:28"
+            "time": "2016-10-03T07:40:28+00:00"
         },
         {
             "name": "phpunit/php-text-template",
@@ -1640,7 +1637,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2017-03-07 15:42:04"
+            "time": "2017-03-07T15:42:04+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -1689,7 +1686,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2017-03-07 08:21:50"
+            "time": "2017-03-07T08:21:50+00:00"
         },
         {
             "name": "phpunit/phpunit",
@@ -1817,7 +1814,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-10-02 06:51:40"
+            "time": "2015-10-02T06:51:40+00:00"
         },
         {
             "name": "sebastian/comparator",
@@ -1881,7 +1878,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2017-03-07 10:34:43"
+            "time": "2017-03-07T10:34:43+00:00"
         },
         {
             "name": "sebastian/diff",
@@ -1933,7 +1930,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2017-05-22 07:24:03"
+            "time": "2017-05-22T07:24:03+00:00"
         },
         {
             "name": "sebastian/environment",
@@ -1983,7 +1980,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2017-02-28 08:18:59"
+            "time": "2017-02-28T08:18:59+00:00"
         },
         {
             "name": "sebastian/exporter",
@@ -2050,7 +2047,7 @@
                 "export",
                 "exporter"
             ],
-            "time": "2017-02-26 13:09:30"
+            "time": "2017-02-26T13:09:30+00:00"
         },
         {
             "name": "sebastian/global-state",
@@ -2101,7 +2098,7 @@
             "keywords": [
                 "global state"
             ],
-            "time": "2017-02-23 14:11:06"
+            "time": "2017-02-23T14:11:06+00:00"
         },
         {
             "name": "sebastian/recursion-context",
@@ -2154,7 +2151,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2016-10-03 07:41:43"
+            "time": "2016-10-03T07:41:43+00:00"
         },
         {
             "name": "sebastian/version",
@@ -2297,14 +2294,12 @@
                 "check",
                 "validate"
             ],
-            "time": "2016-11-23 20:04:41"
+            "time": "2016-11-23T20:04:41+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "pierrelemee/bitmap": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
